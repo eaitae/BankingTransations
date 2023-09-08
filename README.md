@@ -30,7 +30,7 @@ In C# 9 and onwards, a new feature called `record` was introduced. This is espec
 
 ## Unit Testing
 
-To ensure the reliability and correctness of the Bank Transactions Simulator, we've implemented a comprehensive suite of unit tests. These tests validate the basic behavior of the application and act as a safety net against potential regressions.
+To ensure the reliability and correctness of the Bank Transactions Simulator, I've implemented a comprehensive suite of unit tests. These tests validate the basic behavior of the application and act as a safety net against potential regressions.
 
 ### Test Scenarios:
 
