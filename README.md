@@ -61,7 +61,7 @@ git clone [repository-url]
 
 2. Navigate to the project directory and build the solution:
 ```
-cd BankTransactionSimulator
+cd BankTransactions
 dotnet build
 ```
 
