@@ -16,8 +16,7 @@ Console.WriteLine("Welcome to our BankingTransactions!");
 while (chosenOption != MenuOptions.Cancel)
 {
 
-    Console.Write(
-        $"""
+    Console.Write($"""
         What would you like to do?
         {MenuOptions.CreateNewAccount}. Create new account 
         {MenuOptions.MakeATransaction}. Make a transaction 
@@ -106,7 +105,13 @@ void MakeTransaction()
     var accountId = ReadInt("Please, type the id from the target account: ");
     var amount = ReadDecimal("How much do you want to pay in this transaction? ");
     var merchant = ReadString("What is the merchant you are transferring the amount to? ");
-    var mcc = ReadInt("Now, type the MCC: ");
+    var mcc = ReadInt("""
+        For this transaction, we need the Merchant Category Code (MCC). We have three options:
+        For FOOD merchants, use '5411' or '5412'.
+        For MEAL merchans, use '5811' or '5812'. 
+        For another types, use any integer number. 
+        Now, type the MCC: 
+        """);
     Console.WriteLine("Thank you! Now wait while we do the transaction");
     var newTransaction = transactionService.CreateTransaction(new Transaction(0, accountId, amount, merchant, mcc));
     if (newTransaction.IsApproved)
